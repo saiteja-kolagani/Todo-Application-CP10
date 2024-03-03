@@ -1,0 +1,32 @@
+GET http://localhost:3000/todos/?status=TO%20DO&priority=LOW
+###
+
+GET http://localhost:3000/todos/2/
+###
+
+GET http://localhost:3000/agenda/?date=2021-02-22
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+###
+
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "todo": "Batman Toy"
+}
+###
+
+DELETE http://localhost:3000/todos/1/
+###
